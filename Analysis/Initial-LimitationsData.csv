@@ -1,0 +1,220 @@
+Paper,Author,Notes,Language Justification Given Beyond Data Availabilituy? td means typological diversity,Typologically diverse with definition,Cultural Nuances notes,Cultural Nuances Mentioned?,Cultural Nuances Addressed outside of limitations section?,Any discussion on the impact of model training data in relation to evaluation?,Language Coverage,Language Notes,Task & Dataset Used
+Language Models are Few-shot Multilingual Learners,"Winata et al., 2021","k positive and negative samples
+k-way few-shot classification -- k ∈ [0, 5, K], where K ≤ 40 is the largest
+number of few-shot samples that can be passed to
+the model as input and is divisible by 10 without
+exceeding the maximum input token limit",Yes,N/A,Not discuessed,No,N/A,No,"English, French, German, Spanish",closely related to English,"Intent detection: SNIPS, MTOP, MultiNLU"
+Few-shot Learning with Multilingual Language Models,"Lin et al., 2022",It uses high-quality prompts sourced in English and translated into other languages using automatic translation APIs as one approach,Yes,N/A,Cultural nuances and contextual information are mentioned in the context of the translation quality and the naturalness of handcrafted prompts by native speakers. It acknowledges that machine translation can introduce errors that affect performance and that native speaker translations may capture cultural nuances better,Yes,No,No,"English, Chinese (zh), Spanish (es), Hindi (hi), French (fr), German (de), Russian (ru), Arabic (ar), Vietnamese (vi), Thai (th), Urdu (ur), Swahili (sw), Finnish (fi), Bulgarian (bg), Catalan (ca), Portuguese (pt), Japanese (ja), Italian (it), Korean (ko), Estonian (et), Telugu (te), Basque (eu), Indonesian (id), Malay (my), Haitian Creole (ht), Quechua (qu), Bengali (bn), Tamil (ta)",availability of high-quality translations,"MT: FLORES-101
+
+NLU: XStoryCloze,  XNLI, XWinograd, XCOPA, PAWSX, WMT, ARC-easy, ARC-challenge, OpenBookQA, StoryCloze, "
+Language Models are Multilingual Chain-of-Thought Reasoners,"Shi et al., 2022",one example from each of the most frequent languages,Yes td,No,,No,N/A,Yes,"English (EN)
+Bengali (BN)
+Chinese (ZH)
+French (FR)
+German (DE)
+Japanese (JA)
+Russian (RU)
+Spanish (ES)
+Swahili (SW)
+Telugu (TE)
+Thai (TH)","typologically diverse languages with different representation levels in standard pretraining datasets. Typologically diverse not defined though. There is also mention of the distribution of language frequency in the training data for models like PaLM, emphasizing the inclusion of underrepresented languages","Arithmetic Reasoning: MGSM
+Commonsense Reasoning - XCOPA Dataset
+Word-in-Context Disambiguation: XL-WiC "
+In-context Examples Selection for Machine Translation,"Agrawal et al., 2022",the top k source language examples with the highest cosine similarity to the target input are selected using multilingual sentence transformers,Yes td,No,,Yes,No,Yes,"English
+Italian
+Portuguese
+Polish
+Spanish
+French
+Chinese
+German
+Vietnamese
+Swahili
+Thai
+Bengali
+Russian
+Tamil
+Telugu
+Estonian
+Indonesian
+Turkish
+Arabic
+Hindi
+Japanese","availability in datasets + typologically diverse languages
+
+mention of the distribution of language frequency in the training data for models like XGLM and the impact of these distributions on model performance","Natural Language Inference - XNLI Dataset
+Commonsense Reasoning - XCOPA Dataset
+Story Completion - XStoryCloze Dataset
+Pronoun Resolution - XWinograd Dataset
+Paraphrase Identification - PAWS-X Dataset
+Machine Translation - FLORES-101 Dataset
+Machine Translation - WMT Dataset
+Commonsense Reasoning - COPA Dataset
+
+
+
+
+
+
+
+"
+Multilingual LLMs are Better Cross-lingual In-context Learners with Alignment,"Tanwar et al., 2023",,Yes,N/A,,No,N/A,Yes,"German (de)
+English (en)
+French (fr)
+Japanese (ja)
+Spanish (es)
+Mandarin (zh)",availability in datasets,"Hate Speech Detection - HatEval
+Sentiment Classification: CLS
+Sentiment Analysis: MARC"
+Boosting Cross-lingual Transferability in Multilingual Models via In-Context Learning,"Kim et al., 2023",In-CLT and Out-CLT,"Yes, td",No,,No,N/A,Yes,"Arabic (ar)
+Chinese (zh)
+English (en)
+German (de)
+Hindi (hi)
+Romanian (ro)
+Russian (ru)
+Spanish (es)
+Thai (th)
+Turkish (tr)
+Vietnamese (vi)","availability in datasets
+
+There is mention of the distribution of language frequency in the training data for models like BLOOM and XGLM, and how these distributions impact model performance and cross-lingual transferability
+
+","Question Answering - XQuAD Dataset
+Question Answering - MLQA Dataset
+Paraphrase Identification - PAWS Dataset
+Natural Language Inference - XNLI Dataset
+Commonsense Reasoning - XCOPA Dataset
+
+
+
+
+
+
+"
+Multilingual Large Language Models Are Not (Yet) Code-Switchers,"Zhang et al., 2023",CSW,"Yes, td",No,"Cultural nuances are discussed in the paper as an important aspect of code-switching and multilingual communication. However, there is no explicit connection made between cultural nuances and the specific design of prompts used in the experiments",Yes,No,No,"Spanish
+Malayalam
+Tamil
+Hinglish
+English
+Hindi
+Arabic","availability in datasets
+","Summarization: SAMSum
+Machine Translation: MixMT
+Sentiment Analysis: MixSentiment
+Sentiment Analysis: Sentimix
+"
+MEGA: Multilingual Evaluation of Generative AI,"Ahuja et al., 2023",MEGA,"Yes, td",No,,No,N/A,Yes,"German (De), English (En), Russian (Ru), French (Fr), Ukrainian (Uk), Italian (It), Spanish (Es), Romanian (Ro), Chinese (Zh), Japanese (Ja), Czech (Cs), Bengali, Hindi, Kannada, Tamil, Telugu, Urdu, Gujarati, Malayalam, Oriya, Punjabi, Assamese, Swahili, Haitian Creole, Quechua, Vietnamese, Greek, Arabic, Estonian, Turkish, Korean, Marathi, Burmese, Thai, Basque, Bulgarian, Indonesian.","typologically diverse, The multilingual capabilities of models are traced back to their pre-training data","Translation tasks: WMT22, WMT21, FLORES-200.
+Natural Language Inference: RTE, XNLI, Indic-XNLI, GLUECos NLI.
+Commonsense Reasoning: XCOPA, XStoryCloze.
+Paraphrase Identification: PAWS-X.
+Sentiment Analysis: EN-ES-CS dataset.
+Question Answering: XQuAD, MLQA, TyDiQA-GoldP, IndicQA.
+Sequence Labeling: PAN-X, UDPOS.
+Natural Language Generation: XL-Sum.
+Responsible AI: Jigsaw, Wino-MT.
+Reading Comprehension: BoolQ.
+Text Simplification: Asset, Wiki-auto.
+Abstractive Summarization: XLSum."
+Multilingual Few-Shot Learning via Language Model Retrieval,"Winata et al., 2023",Semantically Similar Retrieval,Yes,N/A,,No,N/A,No,"English, French, German, Spanish.","The rationale is based on demonstrating the model’s ability to leverage semantically similar examples from different languages, rather than on specific characteristics of the languages themselves","Intent detection: SNIPS, Multi-NLU, MTOP.
+Topic classification: TREC.
+Sentiment analysis: SST2."
+Large Pre-trained Language Models with Multilingual Prompt for Japanese Natural Language Tasks,"Song et al., 2023",Data mismatch problem solution,Yes,N/A,No but maybe implicit in data mismatch?,No,N/A,No,"Japanese, English.",,"Japanese version of the semantic textual similarity dataset: JSTS
+Japanese version of the natural language inference dataset: JNLI
+Japanese version of reading comprehension dataset: JSQuAD
+Japanese version of multiple-choice commonsense question answering dataset: JCommonsenseQA
+Japanese word segmentation task: KWDLC
+
+
+
+
+
+
+"
+How Good are Commercial Large Language Models on African Languages?,"Ojo & Ogueji, 2023",,Yes,Yes,,No,N/A,No,"Hausa, Nigerian Pidgin, Malagasay, Somali, isiZulu, Yoruba, Swahili, Lugala, English.",The paper explains that the languages chosen for evaluation cover different language families and geographical areas. This selection is to provide a diverse set of African languages for analysis,"Text classification: Hedderich et al. (2020) dataset, Alabi et al. (2022) dataset, Nigerian Pidgin dataset, Malagasay dataset, Somali dataset, isiZulu dataset.
+Machine translation: MAFAND-MT dataset, Yoruba-English translations, Nigerian Pidgin-English translations, Swahili-English translations, Lugala-English translations."
+"BUFFET: Benchmarking Large Language Models
+for Few-shot Cross-lingual Transfer","Asai et al., 2023",BUFFET,"Yes, td",No,,No,N/A,No,"English, Arabic, Swahili, Japanese, Telugu, Finnish, Korean, Russian, Bengali, Vietnamese, Chinese, Hausa, Yoruba, Somali, isiZulu, Luganda, Malagasy, Nigerian Pidgin.",,"Natural Language Inference: XNLI, AMERICASNLI, PARSINLU-ENTAILMENT, KLUE-NLI, OCNLI.
+Paraphrase Detection: PAWS-X.
+Sentiment Analysis: INDIC-NLU-SENTIMENT, MULTILINGUAL AMAZON REVIEW.
+Commonsense Reasoning: XCOPA, XWINOGRAD.
+Question Answering: TYDIQA-GOLDP, TYDIQA-QG.
+Named Entity Recognition: WIKIANN, MASAKHANER.
+Summarization: XLSUM.
+Question Generation: TYDIQA-QG."
+Prompting Large Language Model for Machine Translation: A Case Study,"Zhang et al., 2023",,Yes,N/A,,No,N/A,Yes,"English, German, and Chinese","Past Performacne
+
+The paper mentions that the cross-lingual ability of the GLM-130B centers around English, despite the model being pretrained on both English and Chinese. This suggests that the amount and type of pretraining data influence the effectiveness of different language templates","Natural Language Inference: XNLI, Indic-XNLI, GLUECos NLI.
+Commonsense Reasoning: XCOPA, XStoryCloze.
+Paraphrase Identification: PAWS-X.
+Sentiment Analysis: EN-ES-CS, Amazon Reviews.
+Question Answering: XQuAD, MLQA, TyDiQA-GoldP, IndicQA, JSQuAD.
+Sequence Labeling: PAN-X, UDPOS, WikiANN.
+Natural Language Generation: XL-Sum.
+Responsible AI: Jigsaw, Wino-MT.
+Text Classification: MARC-ja.
+Semantic Textual Similarity: JSTS.
+Common Sense QA: JCommonSenseQA."
+"M3Exam: A Multilingual, Multimodal, Multilevel
+Benchmark for Examining Large Language Models",Zhang et al. 2023,M3Exam,"Yes, td",No,"Yes, the paper addresses cultural nuances and the importance of sourcing real data from various languages to capture native cultural backgrounds. It points out that translating from English data can introduce biases and fail to capture culturally specific concepts 
+",Yes,Yes,Yes,"English, Chinese, Italian, Portuguese, Vietnamese, Thai, Swahili, Afrikaans, Javanese.","selection aims to cover a wide range of language families, resources, written scripts, and major spoken countries to comprehensively evaluate the multilingual capabilities","Natural Language Inference: XNLI, PARSINLU-ENTAILMENT, KLUE-NLI, OCNLI.
+Paraphrase Detection: PAWS-X.
+Sentiment Analysis: Amazon Reviews.
+Commonsense Reasoning: XCOPA, XWINOGRAD.
+Question Answering: TYDIQA-GOLDP, JSQuAD.
+Named Entity Recognition: WIKIANN, MASAKHANER.
+"
+"Breaking Language Barriers with a LEAP:
+Learning Strategies for Polyglot LLMs","Nambi et al., 2023",LEAP,"Yes, td",No,importance of capturing culturally specific and unique concepts by using real-world data,Yes,Yes,Yes,"English, Chinese, Italian, Portuguese, Vietnamese, Thai, Swahili, Afrikaans, Javanese, Assamese, Bengali, Gujarati, Hindi, Kannada, Malayalam, Marathi, Oriya, Punjabi, Tamil, Telugu.",mentions that the performance of multilingual models is influenced by the availability and quality of training data for each language. It highlights the challenges faced by LLMs in handling medium and low-resource languages,"Question Answering: IndicQA, TyDiQA.
+Sentiment Analysis: EN-ES-CS dataset.
+Text Classification: TREC.
+Natural Language Inference: XNLI, GLUECos NLI, PARSINLU-ENTAILMENT, KLUE-NLI, OCNLI.
+Paraphrase Detection: PAWS-X.
+Commonsense Reasoning: XCOPA, XWINOGRAD.
+Sequence Labeling: PAN-X, UDPOS.
+Responsible AI: Jigsaw.
+Summarization: XL-Sum."
+"DEMOCRATIZING LLMS FOR LOW-RESOURCE LAN-
+GUAGES BY LEVERAGING THEIR ENGLISH DOMINANT
+ABILITIES WITH LINGUISTICALLY-DIVERSE PROMPTS","Nguyen et al., 2023",,"Yes, td",No,capturing culturally specific and unique concepts by using real-world data from various languages rather than relying solely on translations from English data,Yes,Yes,Yes,"Arabic, Chinese, Vietnamese, French, English, German, Russian, Ukrainian, Italian, Spanish, French, Nepali, Punjabi, Swahili, Tamil, Telugu, Indonesian, Thai, Javanese, Swahili, Aymara, Korean, Finnish, Russian, Bengali, Hausa",,"Translation: FLORES-200, XNLI, Indic-XNLI, GLUECoS NLI, PAWS-X, XCOPA, XStoryCloze, TyDiQA-GoldP, MLQA, XQuAD, IndicQA, UDPOS, PANX, WinoMT, GLUECoS Sentiment Analysis, Jigsaw Toxicity Classification, XLSum, AMERICAS NLI, BUFFET, XTREME, XTREME-R, XGLUE, IndicXTREME, BUFFET-Light"
+The Impact of Demonstrations on Multilingual In-Context Learning: A Multidimensional Analysis,"Zhang et al., 2024",,No,N/A,,No,N/A,Yes,"English, Arabic, Chinese, French, German, Hindi, Indonesian, Japanese, Korean, Russian, Spanish, Swahili, Thai, Turkish, Vietnamese, Xhosa, Yoruba, Zulu.",no rationale for the specific choice of each language,"Natural Language Inference: XNLI, IndicXNLI.
+Paraphrase Identification: PAWS-X.
+Commonsense Reasoning: XCOPA, XStoryCloze.
+Sentiment Analysis: AfriSenti.
+Question Answering: XQuAD, TyDiQA-GoldP.
+Machine Translation: MAFAND."
+"Multilingual Machine Translation with Large Language Models: Empirical Results and Analysis
+","Zhao et al., 2024",,Yes,No,,No,N/A,Yes,"English, German, Russian, French, Chinese Simplified, Spanish, Japanese, Italian, Vietnamese, Turkish, Indonesian, Swahili, Arabic, Korean, Greek, Thai, Bulgarian, Hindi, Estonian, Bengali, Tamil, Galician, Urdu, Telugu, Javanese, Haitian Creole, Southern Quechua, Catalan, Asturian, Dutch, Danish, Swedish, Icelandic, Luxembourgish, Norwegian.",,"Machine Translation: FLORES-101.
+Evaluation Metrics: BLEU, COMET, SEScore.
+"
+Large Language Models are Parallel Multilingual Learners,"Mu et al., 2024",,Yes,No,,No,N/A,Yes,"German (De)
+English (En)
+Russian (Ru)
+French (Fr)
+Ukrainian (Uk)
+Italian (It)
+Spanish (Es)
+Romanian (Ro)
+Chinese (Zh)
+Japanese (Ja)
+Czech (Cs)",choice of languages in the PIM approach is influenced by the model’s pre-training,"WMT22, WMT21
+FLORES-200
+RTE, XNLI
+BoolQ
+Asset, Wiki-auto
+XLSum"
+"Hire a Linguist!: Learning Endangered Languages
+with In-Context Linguistic Descriptions","Zhang et al., 2024",,Yes,No,,No,N/A,Yes,"Manchu, Gitksan, Uspanteko, Natugu, Tsez, Wolof, Arapaho, Bribri, English, Spanish, Chinese.",,"Translation: Manchu-English, Gitksan-English, Uspanteko-Spanish, Natugu-English, Tsez-English, Wolof-English, Arapaho-English, Bribri-Spanish.
+Mathematical Reasoning: GSM8K.
+Response Selection: Constructed response selection benchmark for Manchu, Gitksan, and Arapaho.
+Word Reordering and Keyword-to-Text: Manchu, Gitksan, Arapaho.
+"
+"Not All Languages Are Created Equal in LLMs:
+Improving Multilingual Capability by Cross-Lingual-Thought Prompting",Huang,XLT,Yes,No,,No,N/A,Yes,"English, German, Russian, French, Chinese Simplified, Spanish, Japanese, Italian, Vietnamese, Turkish, Indonesian, Swahili, Arabic, Korean, Greek, Thai, Bulgarian, Hindi, Estonian, Bengali, Tamil, Galician, Urdu, Telugu, Javanese, Haitian Creole, Southern Quechua.",,"Arithmetic Reasoning: MGSM.
+Commonsense Reasoning: XCOPA.
+Natural Language Inference: XNLI.
+Paraphrase Identification: PAWS-X.
+Question Answering: MKQA.
+Summarization: XL-Sum*.
+Machine Translation: FLORES*.
+"

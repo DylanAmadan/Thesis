@@ -1,0 +1,72 @@
+Paper,Author,Variables Studied,Analysis Notes,Categorisation:
+Language Models are Few-shot Multilingual Learners,"Winata et al., 2021","DS - By using both positive and negative samples in the prompt design
+DO  - By comparing the impact of shuffling few-shot samples versus arranging them with positive samples first.
+ configuring prompts specifically for GPT and T5 models, indicating manipulation of language and structure used in demonstrations.
+","Study tries to separate the effects of demonstrations and template design by using different prompt setups. They tested various formats for GPT and T5 models and arranged samples differently. However, it doesn't go deep into how each variable affects model performance. They mainly report on overall effectiveness rather than diving into the specific contributions of demonstrations versus template design.",Moderate Isolation
+Few-shot Learning with Multilingual Language Models,"Lin et al., 2022","DS, DO","Paper doesn't clearly separate the effects of demonstrations from template designs. They discuss the performance impact of different languages and prompt types (handcrafted, machine-translated, etc.), but don't focus on the specific effects of template variations alone. Instead, they look at cross-lingual transfer through templates and examples without breaking down the unique contributions of the templates themselves.",Low Isolation
+Language Models are Multilingual Chain-of-Thought Reasoners,"Shi et al., 2022","DS: The paper tests different few-shot exemplar sets in the prompts to observe changes in model performance. The demonstrations are formatted into various languages
+
+RS Formatting: The study explores how RSs either in the native language or in English (as in the EN-COT condition) affect the outcomes, indicating a test of RS formatting.
+","The use different prompt templates to show the potential of multilingual chain-of-thought reasoning. While it shows performance differences across various prompting conditions, it doesn't deeply separate the impact of demonstration details from the overall template design. The focus is more on the templates' overall effect on reasoning ability across languages.",Low Isolation
+In-context Examples Selection for Machine Translation,"Agrawal et al., 2022","DS: The paper explores how the choice of in-context examples affects translation quality. It tests different methods of selecting these examples, including optimization to maximize translation quality and retrieval techniques like BM25 to gather relevant examples.
+
+DO: The impact of the order in which examples are presented is also examined, suggesting that this ordering can significantly affect translation outcomes.",It doesn't thoroughly separate the impact of demonstrations from the broader template design. It looks at the effects of different in-context examples and their ordering but doesn't go deep into separating the effects of specific demonstration content from the overall template structure. The focus is on the collective impact on translation quality.,Low Isolation
+Multilingual LLMs are Better Cross-lingual In-context Learners with Alignment,"Tanwar et al., 2023","DS: The paper explores how different in-context examples, particularly those selected based on domain relevance and optimization for quality, impact translation accuracy, the ordering is also done here but not realy in detail
+
+IF: This involves how the prompts are structured to guide the translation process, although the specific details on variations in instruction formatting are not deeply explored.
+
+",The paper looks at the impact of demonstration selection and ordering but doesn't extensively separate these factors from the broader template design. It focuses on comparing different example selection strategies rather than detailing how individual elements of the template contribute to overall performance. This makes it hard to fully understand the isolated impact of each component.,Low Isolation
+Boosting Cross-lingual Transferability in Multilingual Models via In-Context Learning,"Kim et al., 2023","DS: The study explores how demonstration examples composed of cross-lingual (In-CLT) and monolingual (Out-CLT) configurations impact model performance.
+","It examines how different demonstration configurations (cross-lingual vs. monolingual) affect cross-lingual transfer capabilities. But, it mainly looks at the overall effectiveness of these methods rather than isolating specific elements like demonstration content or formatting. It discusses the superior performance of In-CLT over Out-CLT and MONO but doesn't deeply dissect the impact of individual demonstration components.",Moderate Isolation
+Multilingual Large Language Models Are Not (Yet) Code-Switchers,"Zhang et al., 2023","IF: Does look at 5 ""diverse templates"" but this is questionable 
+
+DS: Does look at a CSW demonstrations vs non",Paper doesn't explicitly isolate the impact of demonstrations from template design. It evaluates the performance of LLMs with code-switched text but focuses more on the models' broader capabilities rather than dissecting the specific contributions of demonstration examples versus structural prompt elements.,Low Isolation
+MEGA: Multilingual Evaluation of Generative AI,"Ahuja et al., 2023","DS: The paper discusses the selection of few-shot examples from a pivot language (English), testing how this affects the zero-shot cross-lingual performance.
+
+IF: Different prompt strategies implicitly test variations in instruction formatting, including Monolingual Prompting and Zero-Shot Cross-Lingual Prompting. Also tested native instructustions vs english","The paper evaluates different prompting strategies, including demonstrations and template design elements. However, it doesn't explicitly separate the impact of demonstration content from the overall template design. The focus is more on the broader efficacy of various strategies.",Low Isolation
+Multilingual Few-Shot Learning via Language Model Retrieval,"Winata et al., 2023","DS: The primary variable examined is the method of selecting few-shot examples, specifically focusing on semantic similarity versus random selection. The paper tests the efficacy of semantically similar samples against randomly selected ones in enhancing the model’s few-shot learning capability. Ordering is done but not experiemented on","It looks at different retrieval methods for demonstration selection but doesn't thoroughly separate these factors from the broader template design. The focus is on the selection strategies of few-shot examples and their impact on performance, rather than examining the structure and formatting of the templates themselves.",Low Isolation
+Large Pre-trained Language Models with Multilingual Prompt for Japanese Natural Language Tasks,"Song et al., 2023","DS: The paper assesses different examples used as demonstrations, particularly focusing on the impact of the language of the demonstration (Japanese vs. English) and the type of examples (multilingual vs. monolingual) .
+
+IF --ish: They say they find imporvements from better instruction formats but this is not detailed","It provides data on how different prompt configurations affect model performance, indicating an examination of demonstrations versus template design. However, it doesn't deeply isolate demonstration impacts from the template design as a whole. The discussion is more about overall strategy effectiveness.",Low Isolation
+How Good are Commercial Large Language Models on African Languages?,"Ojo & Ogueji, 2023",N/A,It doesn't focus on isolating the impact of demonstrations from template design. It mainly evaluates the overall effectiveness of commercial language models on tasks involving African languages without dissecting prompt design or demonstration specifics.,No Isolation
+"BUFFET: Benchmarking Large Language Models
+for Few-shot Cross-lingual Transfer","Asai et al., 2023",N/A,"Paper tries to isolate the impact of demonstrations from template design using fixed k-shot instances and machine-translated instructions. However, it doesn't deeply analyze each variable's specific impact on model performance. The focus is more on overall performance rather than dissecting individual contributions. The paper notes performance variance caused by different few-shot samples but doesn't deeply discuss isolating these impacts.",No Isolation
+Prompting Large Language Model for Machine Translation: A Case Study,"Zhang et al., 2023","DS: The paper explores the use of high-quality vs. low-quality prompt examples, as well as pseudo-parallel examples created via forward- and back-translation.
+
+IF: The paper evaluates the performance with various template configurations, including language-specific templates (English, German, Chinese) and with or without line breaks.
+
+","The paper details factors like prompt example quality and monolingual data and deeply isolate each variable's impact independently. however, the discussions focus more on overall performance. ordering is left for future work. They use 1 shot -- so ordering can't be studied",High Isolation
+"M3Exam: A Multilingual, Multimodal, Multilevel
+Benchmark for Examining Large Language Models",Zhang et al. 2023,N/A,"It attempts to isolate the impact of demonstrations from template design using different prompt configurations. It tests various formatting strategies and includes few-shot examples. While it provides insights into overall effectiveness, it doesn't deeply analyze the isolated impact of each variable.
+
+Looks at :  “EN-Instruct” and “EN-Translation”
+
+",No Isolation
+"Breaking Language Barriers with a LEAP:
+Learning Strategies for Polyglot LLMs","Nambi et al., 2023",N/A,It tries to isolate the impact of different prompting strategies on LLM performance using multiple strategies and evaluating their effectiveness across languages. It looks at different configurations but doesn't deeply analyze the specific contributions of each variable in isolation.,No Isolation
+"DEMOCRATIZING LLMS FOR LOW-RESOURCE LAN-
+GUAGES BY LEVERAGING THEIR ENGLISH DOMINANT
+ABILITIES WITH LINGUISTICALLY-DIVERSE PROMPTS","Nguyen et al., 2023","DS: The paper includes an analysis on whether the BLOOM model generates the right language using intra-lingual back-translation prompts versus not using them . The paper compares different prompt templates, such as using native language tags, English language tags, and no tags at all, to assess their impact on performance  .
+","The paper partially isolates the impact of demonstrations from template design by experimenting with different configurations and noting model performance differences. However, it doesn't deeply isolate the impact of different prompt template designs. The focus is on overall performance comparisons.
+
+Good Ablation section - looking at language pairs but doesn't really have anything to do with ICL",Low Isolation
+The Impact of Demonstrations on Multilingual In-Context Learning: A Multidimensional Analysis,"Zhang et al., 2024","DS: The paper experiments with different types of demonstrations, including top-k, random, and random-corrupted demonstrations, to observe their impact on model performance .
+
+Demonstration Formatting: The study includes formatting-focused templates aimed at improving automatic evaluation by reinforcing output formatting .
+
+IF: The paper uses task-specific instructions to guide model responses, especially in formatting-focused templates .",It makes an effort to isolate the impact of demonstrations from template design by using different types of templates and comparing their effects. It suggests that template design significantly influences performance but could benefit from more granular analysis.,High Isolation
+"Multilingual Machine Translation with Large Language Models: Empirical Results and Analysis
+","Zhu et al., 2024","DS: The paper examines different ICL exemplars, including mismatched translation pairs, semantically related exemplars, word-level, and document-level exemplars. They analyze how these variations impact translation performance by systematically varying the exemplars used.
+
+IF: The study evaluates different template structures,",It evaluates various template configurations and their influence on translation performance. It discusses the significant impact of template design but doesn't deeply isolate and analyze individual variables within the templates beyond general comparison.,Moderate Isolation
+Large Language Models are Parallel Multilingual Learners,"Mu et al., 2024",DS: The study includes both positive and negative samples in prompt design.,It uses various prompt configurations to evaluate their impact on performance. Again thought thhe focus is on overall effectiveness rather than deeply analyzing each isolated variable's impact on model performance.,Moderate Isolation
+"Hire a Linguist!: Learning Endangered Languages
+with In-Context Linguistic Descriptions","Zhang et al., 2024","DS: The paper examines the use of different linguistic resources (grammar books, dictionaries, and morphological analyzers) for prompt design. This involves using annotated glosses and morphologically analyzed input text. The paper also configures different formats for prompt templates, including morphological analysis and word-by-word mapping from source to target languages.
+
+",It makes an effort to isolate the impact of template design. ,High Isolation
+"Not All Languages Are Created Equal in LLMs:
+Improving Multilingual Capability by Cross-Lingual-Thought Prompting",Huang,"DS: The paper experiments with different logical instructions within the XLT template, which affects the structure and language used in demonstrations. Good section on the value of ICL however 
+
+IF: Yes, looks at basic vs the proposed XLT
+
+RS: Yes, the paper experiments with how instructions are formatted, including variations in phrasing and detail by providing different logical steps in the XLT template (Role Assigning, Task Inputting, Cross-lingual Thinking, Task Analyzing, CoT Task Solving, Output Formatting).","It employs multiple strategies to isolate the impact of different prompting methods, such as using native language prompts versus English prompts and chain-of-thought reasoning. This provides insights into template design impacts, but it doesn't deeply isolate and quantify each specific variable's impact -- could do with ablating against multilple languages as well",High Isolation
